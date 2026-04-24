@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>English Level Test â richard_diala_talk</title>
+  <title>English Level Test – richard_diala_talk</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <style>
-    /* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-       BRAND COLOURS  â  change these two lines to update the whole page
-       âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+    /* ═══════════════════════════════════════════════════════════════════════
+       BRAND COLOURS  ←  change these two lines to update the whole page
+       ═══════════════════════════════════════════════════════════════════════ */
     :root {
       --brand:      #4DC8E8;
       --brand-dark: #29A8CC;
@@ -32,7 +32,7 @@
       align-items: center;
     }
 
-    /* ââ HEADER ââ */
+    /* ── HEADER ── */
     header {
       width: 100%;
       background: #fff;
@@ -46,7 +46,7 @@
       z-index: 20;
       box-shadow: 0 2px 10px rgba(77,200,232,.10);
     }
-    /* ââ swap this div for <img src="your-logo.png" style="height:44px;border-radius:50%;"> ââ */
+    /* ── swap this div for <img src="your-logo.png" style="height:44px;border-radius:50%;"> ── */
     .logo {
       width: 44px; height: 44px; border-radius: 50%;
       background: linear-gradient(135deg, var(--brand), var(--brand-dark));
@@ -57,19 +57,19 @@
     .brand { font-size: .97rem; font-weight: 800; color: var(--brand-dark); }
     .brand span { display: block; font-size: .72rem; font-weight: 500; color: var(--muted); }
 
-    /* ââ PROGRESS ââ */
+    /* ── PROGRESS ── */
     #prog-wrap { width:100%; height:5px; background:#C9EDF8; }
     #prog-bar  { height:100%; width:0%; background:linear-gradient(90deg,var(--brand),var(--brand-dark)); transition:width .4s ease; }
 
-    /* ââ MAIN ââ */
+    /* ── MAIN ── */
     main { width:100%; max-width:700px; padding:32px 18px 70px; flex:1; }
 
-    /* ââ SCREENS ââ */
+    /* ── SCREENS ── */
     .screen { display:none; animation: up .3s ease; }
     .screen.active { display:block; }
     @keyframes up { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
 
-    /* ââ CARD ââ */
+    /* ── CARD ── */
     .card {
       background:#fff;
       border-radius: var(--radius);
@@ -78,7 +78,7 @@
     }
     @media(max-width:520px){ .card{ padding:24px 18px; } }
 
-    /* ââ WELCOME ââ */
+    /* ── WELCOME ── */
     .badge {
       display:inline-block;
       background:var(--brand-light); color:var(--brand-dark);
@@ -98,7 +98,7 @@
     }
     .chip svg { width:15px; height:15px; fill:var(--brand-dark); flex-shrink:0; }
 
-    /* ââ BUTTONS ââ */
+    /* ── BUTTONS ── */
     .btn {
       display:inline-block; cursor:pointer; border:none; font-weight:700;
       transition:transform .13s, box-shadow .13s;
@@ -115,7 +115,7 @@
     }
     .btn-ghost:hover { background:var(--brand-light); }
 
-    /* ââ QUESTION SCREEN ââ */
+    /* ── QUESTION SCREEN ── */
     .q-bar {
       display:flex; justify-content:space-between; align-items:center;
       margin-bottom:16px; font-size:.83rem; font-weight:600; color:var(--muted);
@@ -166,7 +166,7 @@
     }
     #feedback.show { display:block; }
 
-    /* ââ RESULT SCREEN ââ */
+    /* ── RESULT SCREEN ── */
     .res-card { text-align:center; }
     .res-label { font-size:.8rem; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); margin-bottom:10px; }
     .res-badge {
@@ -240,7 +240,7 @@
 
 <main>
 
-  <!-- ââ WELCOME ââ -->
+  <!-- ══ WELCOME ══ -->
   <div id="s-welcome" class="screen active">
     <div class="card" style="text-align:center;">
       <div class="badge">Free Placement Test</div>
@@ -251,7 +251,7 @@
       <div class="chips">
         <div class="chip">
           <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4Zm-.5 4v5.25l4.5 2.7-.75 1.23L10 14.5V8h1.5Z"/></svg>
-          10â15 min
+          10–15 min
         </div>
         <div class="chip">
           <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016Z"/></svg>
@@ -259,15 +259,15 @@
         </div>
         <div class="chip">
           <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-1 14H9V8h2v8Zm4 0h-2V8h2v8Z"/></svg>
-          A1 â C2
+          A1 → C2
         </div>
       </div>
-      <button class="btn btn-main" onclick="startTest()">Start Test â</button>
-      <p class="note">Choose the best answer for each question.<br>Don't worry if some feel hard â that's intentional!</p>
+      <button class="btn btn-main" onclick="startTest()">Start Test →</button>
+      <p class="note">Choose the best answer for each question.<br>Don't worry if some feel hard — that's intentional!</p>
     </div>
   </div>
 
-  <!-- ââ QUESTION ââ -->
+  <!-- ══ QUESTION ══ -->
   <div id="s-question" class="screen">
     <div class="q-bar">
       <span id="q-num">Question 1 of 50</span>
@@ -278,12 +278,12 @@
       <div id="opts" class="opts"></div>
       <div id="feedback"></div>
       <div class="q-foot">
-        <button id="btn-next" class="btn btn-main" onclick="nextQ()" style="display:none;">Next â</button>
+        <button id="btn-next" class="btn btn-main" onclick="nextQ()" style="display:none;">Next →</button>
       </div>
     </div>
   </div>
 
-  <!-- ââ RESULT ââ -->
+  <!-- ══ RESULT ══ -->
   <div id="s-result" class="screen">
     <div class="card res-card">
       <div class="res-label">Your Result</div>
@@ -309,12 +309,12 @@
 </main>
 
 <script>
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-   QUESTION BANK  â  50 questions, same as englishtag.com/tests/level_test.asp
+/* ═══════════════════════════════════════════════════════════════════════════
+   QUESTION BANK  —  50 questions, same as englishtag.com/tests/level_test.asp
    Answers verified: 49/50 correct on submission + Q24 corrected to D (omission)
-   âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   ═══════════════════════════════════════════════════════════════════════════ */
 const Q = [
-  // ââ GRAMMAR CORE (A1âB1) ââââââââââââââââââââââââââââââââââââââââââââââââ
+  // ── GRAMMAR CORE (A1–B1) ────────────────────────────────────────────────
   {
     t: 'How old are you?',
     o: ['I have 27 years old.','I have 27 years.','I am fine.','I am 27 years old.'],
@@ -396,7 +396,7 @@ const Q = [
     a: 0, lvl:'B1'
   },
   {
-    t: "The room can't be dirty â she ___",
+    t: "The room can't be dirty — she ___",
     o: ['is just clean it.','have just cleaned it.','just clean it.','has just cleaned it.'],
     a: 3, lvl:'B1'
   },
@@ -415,7 +415,7 @@ const Q = [
     o: ['yet','still','now','already'],
     a: 0, lvl:'B1'
   },
-  // ââ GRAMMAR ADVANCED (B1âB2) âââââââââââââââââââââââââââââââââââââââââââââ
+  // ── GRAMMAR ADVANCED (B1–B2) ─────────────────────────────────────────────
   {
     t: 'Hadeel is ___ Kauthar to get up now.',
     o: ['telling','saying','saying to','telling to'],
@@ -433,7 +433,7 @@ const Q = [
   },
   {
     t: 'This is the girl ___ I met on Thursday.',
-    o: ['whom','which','what','â (no word needed)'],
+    o: ['whom','which','what','— (no word needed)'],
     a: 3, lvl:'B2'
   },
   {
@@ -457,7 +457,7 @@ const Q = [
     a: 1, lvl:'B2'
   },
   {
-    t: "That's the ___ of my worries â it'll never happen.",
+    t: "That's the ___ of my worries — it'll never happen.",
     o: ['fewer','less','last','least'],
     a: 3, lvl:'B2'
   },
@@ -482,7 +482,7 @@ const Q = [
     a: 3, lvl:'B2'
   },
   {
-    t: "I ___ it doesn't rain tomorrow â I'm going for a picnic.",
+    t: "I ___ it doesn't rain tomorrow — I'm going for a picnic.",
     o: ['wait','expect','hope','wish'],
     a: 2, lvl:'B2'
   },
@@ -491,10 +491,10 @@ const Q = [
     o: ['will come to the party.','were coming to the party.','come to the party.','have come to the party.'],
     a: 1, lvl:'B2'
   },
-  // ââ VOCABULARY & STRUCTURE (C1) ââââââââââââââââââââââââââââââââââââââââââ
+  // ── VOCABULARY & STRUCTURE (C1) ──────────────────────────────────────────
   {
     t: 'He remembers being ___ to the fair as a child.',
-    o: ['visited','brought','taken','shown'],
+    o: ['visited','brought','daten','shown'],
     a: 2, lvl:'C1'
   },
   {
@@ -518,7 +518,7 @@ const Q = [
     a: 3, lvl:'C1'
   },
   {
-    t: "I wish I ___ a car â I'm tired of catching the bus.",
+    t: "I wish I ___ a car — I'm tired of catching the bus.",
     o: ['have','had','would have','had had'],
     a: 1, lvl:'C1'
   },
@@ -538,11 +538,11 @@ const Q = [
     a: 2, lvl:'C1'
   },
   {
-    t: "He wrote the letter ___ â he didn't need anybody's help.",
+    t: "He wrote the letter ___ — he didn't need anybody's help.",
     o: ['on his own','by his own','on himself','by his ownership'],
     a: 0, lvl:'C1'
   },
-  // ââ ADVANCED / C2 ââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+  // ── ADVANCED / C2 ────────────────────────────────────────────────────────
   {
     t: 'Hotel rooms must be ___ by noon.',
     o: ['vacated','evacuated','abandoned','leave'],
@@ -570,11 +570,11 @@ const Q = [
   }
 ];
 
-/* âââ STATE ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+/* ═══ STATE ════════════════════════════════════════════════════════════════ */
 let cur = 0, score = 0, answered = false;
 const LETTERS = ['A','B','C','D'];
 
-/* âââ FUNCTIONS ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+/* ═══ FUNCTIONS ════════════════════════════════════════════════════════════ */
 function show(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
@@ -589,7 +589,7 @@ function render() {
   document.getElementById('q-num').textContent = `Question ${cur + 1} of ${Q.length}`;
   document.getElementById('q-lvl').textContent = q.lvl;
 
-  // Question text â highlight blank
+  // Question text — highlight blank
   document.getElementById('q-text').innerHTML = q.t.replace('___', '<span class="blank">___</span>');
 
   // Options
@@ -622,10 +622,10 @@ function pick(idx, btn) {
   const fb = document.getElementById('feedback');
   if (idx === q.a) {
     score++;
-    fb.textContent = 'â Correct!';
+    fb.textContent = '✓ Correct!';
     fb.style.color = 'var(--ok)';
   } else {
-    fb.textContent = `â The correct answer is ${LETTERS[q.a]}.`;
+    fb.textContent = `✗ The correct answer is ${LETTERS[q.a]}.`;
     fb.style.color = 'var(--err)';
   }
   fb.classList.add('show');
@@ -655,7 +655,7 @@ function showResult() {
   document.getElementById('r-badge').textContent = lvl;
   document.getElementById('r-badge').style.background = `linear-gradient(135deg, ${d.col}, ${d.col}BB)`;
   document.getElementById('r-name').textContent  = d.name;
-  document.getElementById('r-cefr').textContent  = `CEFR Level Â· ${score}/50 correct`;
+  document.getElementById('r-cefr').textContent  = `CEFR Level · ${score}/50 correct`;
   document.getElementById('r-correct').textContent = score;
   document.getElementById('r-pct').textContent     = pct + '%';
   document.getElementById('r-desc').textContent    = d.desc;
@@ -678,13 +678,13 @@ function takeScreenshot() {
 function share() {
   const lvl  = document.getElementById('r-badge').textContent;
   const name = document.getElementById('r-name').textContent;
-  const txt  = `I just took the richard_diala_talk English test and got ${lvl} â ${name}! Try it yourself ð¯`;
+  const txt  = `I just took the richard_diala_talk English test and got ${lvl} – ${name}! Try it yourself 🎯`;
   if (navigator.share) {
     navigator.share({ title:'My English Level', text: txt, url: location.href });
   } else {
-    navigator.clipboard?.writeText(txt).then(() => alert('Result copied â paste it anywhere!'));
+    navigator.clipboard?.writeText(txt).then(() => alert('Result copied — paste it anywhere!'));
   }
 }
-</script>
+</hscript>
 </body>
 </html>
