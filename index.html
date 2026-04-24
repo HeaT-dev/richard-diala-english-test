@@ -494,7 +494,7 @@ const Q = [
   // ── VOCABULARY & STRUCTURE (C1) ──────────────────────────────────────────
   {
     t: 'He remembers being ___ to the fair as a child.',
-    o: ['visited','brought','daten','shown'],
+    o: ['visited','brought','taken','shown'],
     a: 2, lvl:'C1'
   },
   {
@@ -539,7 +539,7 @@ const Q = [
   },
   {
     t: "He wrote the letter ___ — he didn't need anybody's help.",
-    o: ['on his own','by his own','on himself','by his ownership'],
+    o: ['on his own','byhis own','on himself','by his ownership'],
     a: 0, lvl:'C1'
   },
   // ── ADVANCED / C2 ────────────────────────────────────────────────────────
@@ -622,11 +622,11 @@ function pick(idx, btn) {
   const fb = document.getElementById('feedback');
   if (idx === q.a) {
     score++;
-    fb.textContent = '✓ Correct!';
+    fb.textContent = '▓ Correct!';
     fb.style.color = 'var(--ok)';
   } else {
     fb.textContent = `✗ The correct answer is ${LETTERS[q.a]}.`;
-    fb.style.color = 'var(--err)';
+    fb.style.color = 'var(--err)'�;
   }
   fb.classList.add('show');
   document.getElementById('btn-next').style.display = 'inline-block';
@@ -685,6 +685,6 @@ function share() {
     navigator.clipboard?.writeText(txt).then(() => alert('Result copied — paste it anywhere!'));
   }
 }
-</hscript>
+</script>
 </body>
 </html>
