@@ -686,9 +686,9 @@ function takeScreenshot() {
 function share() {
   const lvl  = document.getElementById('r-badge').textContent;
   const score = document.getElementById('r-correct').textContent;
-  const txt  = `My score was ${score}/50 – ${lvl} on the richard_diala_talk English test! Try it yourself 🎯`;
+  const txt  = `My score was ${score}/50 – ${lvl}.`;
   if (navigator.share) {
-    navigator.share({ title:'My English Level', text: txt, url: location.href });
+    navigator.share({ title:'My English Level', text: txt });
   } else {
     navigator.clipboard?.writeText(txt).then(() => alert('Result copied — paste it anywhere!'));
   }
