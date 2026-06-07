@@ -685,8 +685,8 @@ function takeScreenshot() {
 
 function share() {
   const lvl  = document.getElementById('r-badge').textContent;
-  const name = document.getElementById('r-name').textContent;
-  const txt  = `I just took the richard_diala_talk English test and got ${lvl} – ${name}! Try it yourself 🎯`;
+  const score = document.getElementById('r-correct').textContent;
+  const txt  = `My score was ${score}/50 – ${lvl} on the richard_diala_talk English test! Try it yourself 🎯`;
   if (navigator.share) {
     navigator.share({ title:'My English Level', text: txt, url: location.href });
   } else {
